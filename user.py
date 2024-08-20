@@ -8,7 +8,20 @@ def create_connection():
     except Exception as e:
         print(f"Error: {e}")
         return None
-
+        
+INPUT_STRING = """ 
+Enter the option:
+    1. Create Table
+    2. Dump users from CSV into users table
+    3. Add New Users Into Users Table
+    4. Query All Users From Table
+    5. Query Users By id Form Table
+    6. Query Specified No Of Records From Table
+    7. Delete All Users
+    8. Delete User by id
+    9. Update User
+    10. Press Any Key To Exit
+"""
 def create_table(conn):
     CREATE_USERS_TABLE_QUERY = """
        CREATE TABLE IF NOT EXISTS users (
